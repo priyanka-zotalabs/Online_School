@@ -1,0 +1,566 @@
+#nextbtn-signupteacher-e {
+  // style={{ marginTop: "10%" }}>
+  margin-top: 8%;
+}
+// #resendOTP-signupteacher-e{
+//     // style={{ marginTop: "5%" }}
+//     margin-top: 5%;
+// }
+// #OTP-signupteacher-e{
+//     padding-top: 1rem;
+// }
+.main-login-div-signupteacher-e {
+  // padding-top: 20px;
+  top: 115px;
+  left: 0px;
+  width: 100%;
+  height: 640px;
+  background: transparent
+    linear-gradient(180deg, #008ccb 0%, #ffffff 100%, #ff5252de 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000000;
+  opacity: 1;
+}
+
+.main-header-signupteacher-e {
+  margin-top: 20%;
+  text-align: center;
+  font: Bold 35px Arial;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.logInForm-div-signupteacher-e {
+  padding: 2rem;
+  margin-top: 5%;
+}
+
+#error-message-signupteacher-e {
+  text-align: center;
+  padding-top: 5px;
+  color: red;
+  font-size: 11px;
+  //    margin-left: 20px;
+}
+
+#signIn-label-signupteacher-e {
+  margin-top: 3%;
+  font-weight: bold;
+}
+//   #mobile91-login-signupteacher{
+//     // style={{ marginTop: "7px" }}
+//     margin-top: 7px;
+//   }
+#form-signin-col-signupteacher-e {
+  // style={{ marginTop: "5%" }}
+  margin-top: 5%;
+}
+#form-signupteacher-col-signupteacher-e {
+  // style={{ marginTop: "8%" }}
+  margin-top: 8%;
+}
+#started-span-signupteacher-e {
+  padding: 0;
+  margin: 0;
+  color: #475083;
+  letter-spacing: 0px;
+  font-size: 26px;
+  font-weight: 600;
+}
+#signIn-span-signupteachernew-e {
+  padding: 0 10px;
+  margin: 0 20px;
+  color: #ff5252;
+  letter-spacing: 0px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.form-group-login-signupteacher-e {
+  padding: 1rem;
+}
+
+//   .or-text-signupteacher {
+//     color: #ff5252;
+//     font: SemiBold 36px/55px Poppins;
+//     letter-spacing: 0px;
+//   }
+.form-container Form {
+  text-align: center;
+}
+
+#form-next-btn-signupteacher-e {
+  background: #fc8013 0% 0% no-repeat padding-box !important;
+  width: 70%;
+  cursor: pointer;
+}
+
+@media (max-width: 359px) and (min-width: 320px) {
+  .signInImage-signupteacher-e {
+    width: 80%;
+    margin-left: 4%;
+  }
+  logInForm-div-signupteacher-e {
+    padding: 1rem;
+    margin-top: 10%;
+  }
+  .main-login-div-signupteacher-e {
+    height: 500px;
+  }
+  .hideFirstColsignupteachertechE {
+    display: none;
+  }
+  .signInBox-signupteacher-e {
+    text-align: center;
+    background-color: white;
+    margin-top: -125%;
+    margin-left: 4%;
+    z-index: 1;
+    //   margin-bottom: 5%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    // height: 200px;
+    margin-top: 8% !important;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-signupteacher-e {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #signIn-span-signupteachernew-e {
+    // letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 20%;
+  }
+  #signIn-label-signupteacher-e {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 70%;
+  }
+}
+
+@media (max-width: 374px) and (min-width: 360px) {
+  // .main-login-div-signupteacher-e {
+  //     margin-top: 10%;
+  // }
+  .main-login-div-signupteacher-e {
+    height: 500px;
+  }
+  .signInImage-signupteacher-e {
+    width: 90%;
+    margin-left: 4%;
+  }
+  .logInForm-div-signupteacher-e {
+    padding: 1rem;
+    margin-top: 5%;
+  }
+  .hideFirstColsignupteachertechE {
+    display: none;
+  }
+  .signInBox-signupteacher-e {
+    padding: 25px;
+    background-color: white;
+    // margin-top: -120%;
+    text-align: center;
+    margin-left: 4%;
+    z-index: 1;
+    height: 430px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    //   height: 200px;
+    margin-top: 8% !important;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-signupteacher-e {
+    text-align: center;
+    // padding-top:200px;
+    //   padding: 0;
+    //   margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #signIn-span-signupteachernew-e {
+    text-align: center;
+    // letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 10%;
+  }
+  #signIn-label-signupteacher-e {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 60%;
+  }
+}
+@media (max-width: 410px) and (min-width: 375px) {
+  .signInImage-signupteacher-e {
+    width: 85%;
+    margin-left: 4%;
+  }
+  .logInForm-div-signupteacher-e {
+    padding: 1rem;
+    margin-top: 7%;
+  }
+
+  .main-login-div-signupteacher-e {
+    height: 450px;
+  }
+  //  .signInImage-signupteacher-e{
+  //   width:90%;
+  //  }
+  .hideFirstColsignupteachertechE {
+    display: none;
+  }
+  .signInBox-signupteacher-e {
+    text-align: center;
+    background-color: white;
+    // margin-top: -108%;
+    margin-left: 4%;
+    z-index: 1;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    // height: 200px;
+    margin-top: 8% !important;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-signupteacher-e {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #signIn-span-signupteachernew-e {
+    // letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 10%;
+  }
+  #signIn-label-signupteacher-e {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 65%;
+  }
+}
+
+@media (max-width: 599px) and (min-width: 411px) {
+  .signInImage-signupteacher-e {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .main-login-div-signupteacher-e {
+    height: 550px;
+  }
+  .hideFirstColsignupteachertechE {
+    display: none;
+  }
+  .signInBox-signupteacher-e {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    // margin-top: -100%;
+    margin-left: 4%;
+    z-index: 1;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    // height: 200px;
+    margin-top: 15% !important;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-signupteacher-e {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #signIn-span-signupteachernew-e {
+    // letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 13%;
+  }
+  #signIn-label-signupteacher-e {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 60%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 600px) {
+  // .signInImage-signupteacher-e{
+  //   width:100%;
+  //  }
+  .logInForm-div-signupteacher-e {
+    padding: 1%;
+    margin-top: 10%;
+  }
+  .signInImage-signupteacher-e {
+    width: 85%;
+    margin-left: 5%;
+  }
+
+  .main-login-div-signupteacher-e {
+    height: 580px;
+  }
+  .hideFirstColsignupteachertechE {
+    display: none;
+  }
+  .signInBox-signupteacher-e {
+    text-align: center;
+    background-color: white;
+    // margin-top: -80%;
+    margin-left: 4%;
+    z-index: 1;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    height: 450px;
+    margin-top: 15% !important;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-signupteacher-e {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  #signIn-span-signupteachernew-e {
+    // letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 15%;
+  }
+
+  #signIn-label-signupteacher-e {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 50%;
+  }
+}
+@media (max-width: 1005px) and (min-width: 768px) {
+  .signInImage-signupteacher-e {
+    width: 110%;
+  }
+  .logInForm-div-signupteacher-e {
+    padding: 2rem;
+    margin-top: 10%;
+  }
+  .main-login-div-signupteacher-e {
+    //   margin-top: 10%;
+    height: 530px;
+  }
+  //      #mobile91-login-signupteacher {
+  //       margin-top: 7px;
+  //       margin-left: -20px;
+  //       margin-right: 0px;
+  //   }
+  // .hideFirstColsignupteachertechE {
+  //   display: none;
+  // }
+  .signInBox-signupteacher-e {
+    // margin-top: 30%;
+    text-align: center;
+    background-color: white;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    z-index: 1;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    // height: 200px;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  // .col-sm-3 {
+  // #signIn-label-signupteacher-e {
+
+  //  margin-left: 10%;
+  //   margin-top: 2%;
+  //   font-weight: bold;
+  //   padding: 0px;
+  //   }
+  // }
+  #started-span-signupteacher-e {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #signIn-span-signupteachernew-e {
+    // letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 15%;
+  }
+  #signIn-label-signupteacher-e {
+    margin-left: -10%;
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 70%;
+  }
+  // group-loginform-g{
+  //   .col-sm-3 {
+  //      width:20%;
+  //   }
+  // #mobile91-login-signupteacher{
+
+  // }
+  // }
+
+  //  .Get-started-login{
+  //    width:120%
+}
+
+@media (max-width: 1023px) and (min-width: 1006px) {
+  .signInImage-signupteacher-e {
+    width: 100%;
+  }
+  .hideFirstColsignupteachertechE {
+    display: none;
+  }
+  .signInBox-signupteacher-e {
+    background-color: white;
+    margin-top: 7%;
+    // margin-left: 16%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    // height: 511px;
+    border-radius: 45px;
+  }
+}
+@media (max-width: 1919px) and (min-width: 1024px) {
+  .signInImage-signupteacher-e {
+    width: 100%;
+  }
+  .logInForm-div-signupteacher-e {
+    padding: 2rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 5%;
+  }
+  // .hideFirstColsignupteachertechE {
+  //   display: none;
+  // }
+  .signInBox-signupteacher-e {
+    text-align: center;
+    background-color: white !important;
+    margin-top: 7%;
+    margin-left: 16%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    height: 500px;
+    border-radius: 45px;
+  }
+  #started-span-signupteacher-e {
+    padding-top: 20px;
+  }
+  #signIn-span-signupteachernew-e {
+    padding-top: 20px;
+  }
+  #signIn-label-signupteacher-e {
+    margin-left: -20%;
+    z-index: 2;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 10%;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .signInImage-signupteacher-e {
+    width: 120%;
+  }
+  .logInForm-div-signupteacher-e {
+    padding: 2rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 5%;
+  }
+  // .hideFirstColsignupteachertechE {
+  //   display: none;
+  // }
+  .signInBox-signupteacher-e {
+    text-align: center;
+    background-color: white;
+    margin-top: 7%;
+    margin-left: 16%;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+    height: 500px;
+    border-radius: 60px;
+  }
+  #started-span-signupteacher-e {
+    padding-top: 20px;
+  }
+  #signIn-span-signupteachernew-e {
+    padding-top: 20px;
+  }
+  #signIn-label-signupteacher-e {
+    margin-left: -20%;
+    z-index: 2;
+  }
+  .form-group-login-signupteacher-e {
+    padding: 1%;
+    margin-top: 15%;
+  }
+  #form-next-btn-signupteacher-e {
+    width: 70%;
+  }
+}

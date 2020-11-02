@@ -1,0 +1,37 @@
+openapi: "3.0.2"
+info:
+  title: Students fees payment APIs
+  version: "1.0"
+
+paths:
+  /feeStructure/getStudentFeeStructure:
+    get:
+      summary: Get student's fees payment status from batch
+      description: Requires student login
+      tags:
+        - Student_Payment
+      responses:
+        "200":
+          description: Return's fee structure specific to student from batch
+
+
+  /feeStructure/updateStudentFeeStructure:
+    put:
+      summary: Update student's fees payment status in batch
+      description: Requires student login
+      tags:
+        - Student_Payment
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+          description: Batch ID of student
+        - in: query
+          name: installmentId
+          schema:
+            type: string
+          description: Installment ID of the payment mentioned in fee structure of a student in a batch
+      responses:
+        "200":
+          description: Return's updated student fees payment status

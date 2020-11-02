@@ -1,0 +1,74 @@
+openapi: "3.0.2"
+info:
+  title: Chatbox APIs
+  version: "1.0"
+
+paths:
+  /chatbox:
+    post:
+      summary: Add Chat
+      description: Add chat between student and teacher
+      tags:
+        - Chatbox
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - receiverId
+                - senderId
+                - message
+              properties:
+                receiverId:
+                  type: string
+                senderId:
+                  type: string
+                message:
+                  type: string
+      responses:
+        "200":
+          description: Returns chat added successfully
+
+    put:
+      summary: Update Chat
+      description: Update chat between student and teacher
+      tags:
+        - Chatbox
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - receiverId
+                - senderId
+                - message
+              properties:
+                senderId:
+                  type: string
+                receiverId:
+                  type: string
+                message:
+                  type: string
+      responses:
+        "200":
+          description: Returns chat updated successfully
+
+    get:
+      summary: GET all Chats
+      description: Get all the chat between student and teacher
+      tags:
+        - Chatbox
+      parameters:
+        - in: query
+          name: senderId
+          schema:
+            type: string
+        - in: query
+          name: receiverId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns chat between student and teacher successfully

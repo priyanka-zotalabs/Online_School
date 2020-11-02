@@ -1,0 +1,38 @@
+.paper_create_test_header {
+    margin-top: 3%;
+    padding: 10px;
+    box-shadow: 0px 2px 10px #00000024;;
+    padding:spacing(2);
+  }
+
+  .firstFormPaper
+  {
+    margin-top: 3%;
+    padding: 10px;
+    box-shadow: 0px 2px 10px #00000024;;
+    padding:spacing(2);
+  }
+
+  .create_test_details_cancel_btn
+  {
+    float: left;
+    padding-right: 90px !important;
+    padding-left: 90px !important;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 13px;
+    color:#8499ff !important;
+    border: #8499ff solid 2px !important;
+    background-color: #FBFAF8 !important;
+  }
+
+  .create_test_details_submit_btn
+  {
+    padding-right: 80px !important;
+    padding-left: 80px !important;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 13px;
+    background-color: #8499ff !important;
+    color:#FBFAF8 !important;
+  }

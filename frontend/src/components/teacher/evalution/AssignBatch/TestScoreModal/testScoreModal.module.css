@@ -1,0 +1,15 @@
+.score_Modal_heading{
+
+    text-align: center !important;
+       font: Bold 20px Roboto;
+      letter-spacing: 0px;
+      color: #3d736d;
+       margin-bottom:8%;
+       margin-top: 3%;
+  }
+  #testScoreModalHeading{
+    text-align: center !important;
+    color:rgb(94, 139, 182);
+    margin-top: 3%;
+    width: 100%;
+}

@@ -1,0 +1,27 @@
+openapi: "3.0.2"
+info:
+  title: Notification APIs
+  version: "1.0"
+
+
+paths:
+  /notification/storeToken:
+    post:
+      summary: store token
+      description:  store token
+      tags:
+        - Notification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - tokenId
+              properties:
+                tokenId:
+                  type: string
+      responses:
+        "200":
+          description: Returns token stored successfully
+ 

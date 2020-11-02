@@ -1,0 +1,84 @@
+openapi: "3.0.2"
+info:
+  title: PayPal Payment APIs
+  version: "1.0"
+
+paths:
+  /paypal/payment/createOrder:
+    post:
+      summary: Create OrderId for PayPal payment
+      description: Student Login required.
+      tags:
+        - PayPal_Payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                course_name:
+                  type: string
+                amount:
+                  type: string
+                buyer_name:
+                  type: string
+                buyer_surname:
+                  type: string
+                mobile_number:
+                  type: string
+                email_address:
+                  type: string
+                # address_line_1:
+                #   type: string
+                # address_line_2:
+                #   type: string
+                # city:
+                #   type: string
+                # state_code:
+                #   type: string
+                # postal_code:
+                #   type: string
+                # country_code:
+                #   type: string
+      responses:
+        "200":
+          description: Returns oderID and approve link on success.
+
+  /paypal/payment/captureOrder:
+    post:
+      summary: Capture orderID after approved.
+      description: Student Login required.
+      tags:
+        - PayPal_Payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                approvedPayPalOrderId:
+                  type: string
+                batchId:
+                  type: string
+                installmentId:
+                  type: string
+                paymentMethod:
+                  type: string
+      responses:
+        "200":
+          description: Returns success after orderID capture.
+
+  /paypal/getPaypalSTC:
+    get:
+      summary: Get STC Data
+      description: Get STC data By OrderID
+      tags:
+        - PayPal_Payment
+      parameters:
+        - in: query
+          name: orderId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns STC Data

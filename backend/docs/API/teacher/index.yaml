@@ -1,0 +1,62 @@
+openapi: '3.0.2'
+info:
+  title: Teacher's APIs
+  version: '1.0'
+
+paths:
+  /teacher/profile:
+    put:
+      summary: Teacher can create / Update Profile
+      description: teacher Can Create / Update Profile
+      tags:
+        - teacher
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - experience
+              properties:
+                name:
+                  type: string
+                contactNumber:
+                  type: string
+                imageUrl:
+                  type: string
+                aboutMe:
+                  type: string
+                subject:
+                  type: string
+                board:
+                  type: string
+                qualification:
+                  type: string
+                experience:
+                  type: string
+                location:
+                  type: string
+                linkedInUrl:
+                  type: string
+                resumeUrl:
+                  type: string
+      responses:
+        "200":
+          description: Update Teacher Profile successfully
+    get:
+      summary: Get active logged in teacher data
+      description: Need to login as a teacher to access the API
+      tags:
+        - teacher
+      responses:
+        '200':
+          description: Returns teacher details
+  /teacher/batchWiseStudent:
+    get:
+        summary: Get active logged in teacher' batch Wise Student
+        description: Need to login as a teacher to access the API
+        tags:
+          - teacher
+        responses:
+          '200':
+            description: Returns teacher batch Wise Student

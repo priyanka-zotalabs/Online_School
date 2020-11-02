@@ -1,0 +1,139 @@
+openapi: "3.0.2"
+info:
+  title: Course APIs
+  version: "1.0"
+
+paths:
+  /studentOnboarding:
+    post:
+      summary: Onborded a student
+      description: Onborded a student
+      tags:
+        - studentOnboarding
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                - email
+                - contactNumber
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                contactNumber:
+                  type: string
+                discount:
+                  type: string
+                courses:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      courseId:
+                        type: string
+                      # courseName:
+                      #   type: string
+                      batchId:
+                        type: string
+                      # batchName:
+                      #   type: string
+                      # feeStructureId:
+                      #   type: string
+                      # feeStructureName:
+                      #   type: string
+
+      responses:
+        "200":
+          description: Returns student Onboarded successfully
+    get:
+      summary: Get onboarded student for Admin
+      description: Get onboarded student for Admin
+      tags:
+        - studentOnboarding
+      responses:
+        "200":
+          description: Returns Get onboarded student Details
+
+  /studentOnboarding/firstLoginChangePassword:
+    post:
+      summary: Change first time Login ChangePassword
+      description: Change first time Login ChangePassword
+      tags:
+        - studentOnboarding
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - currentPassword
+                - newPassword
+                - confirmPassword
+              properties:
+                currentPassword:
+                  type: string
+                newPassword:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        "200":
+          description: Returns Password has been changed successfully
+  /studentOnboarding/pagination:
+    get:
+      summary: Get onboarded student for Admin
+      description: Get onboarded student for Admin
+      tags:
+        - studentOnboarding
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: string
+        # - in: query
+        #   name: pageSize
+        #   schema:
+        #     type: string
+      responses:
+        "200":
+          description: Returns Get onboarded student Details
+
+  /studentOnboarding/bulkUpload:
+    post:
+      summary: Bulk Onboarding student to application
+      description: Bulk Onboarding student to application by admin
+      tags:
+        - studentOnboarding
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - bulkFile
+                - courseId
+                - batchId
+              properties:
+                courseId:
+                  type: string
+                batchId:
+                  type: string
+                bulkFile:
+                  type: string
+                  format: binary
+                  encoding:
+                    bulkFile:
+                      contentType: text/csv, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      responses:
+        "200":
+          description: Returns success of bulk onboarding of students by admin
+

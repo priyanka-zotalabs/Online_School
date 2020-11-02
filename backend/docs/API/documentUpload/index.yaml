@@ -1,0 +1,28 @@
+openapi: "3.0.2"
+info:
+  title: Document Upload API
+  version: "1.0"
+
+
+paths:
+  /documentUpload:
+    post:
+      summary: Single file upload to azure container
+      description: Single file upload to azure container
+      tags:
+        - Document Upload
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - document
+              properties:
+                document:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Returns digitalocean's bucket URL if file uploads scuccessfully.

@@ -1,0 +1,114 @@
+.success {
+  text-align: center;
+
+  h2 {
+    color: seagreen;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.checkout-form {
+  width: 75%;
+  margin: auto;
+  margin-top: 10%;
+  padding: 2em;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+
+#checkout-row{
+  margin-bottom: 2%;
+  align-items: center;
+}
+
+  .checkout-label {
+    // min-width: 500px;
+    color: #252525;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    float: right;
+  }
+
+ .checkout-amount {
+    // min-width: 500px;
+    color: #252525;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    text-align: center;
+  }
+
+  input,
+  .StripeElement {
+    display: block;
+    margin: 10px 0 20px 0;
+    padding: 18px 14px;
+    font-size: 1em;
+    font-family: "Poppins";
+    box-shadow: rgba(50, 50, 93, 0.4) 0px 1px 3px,
+      rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    background: white;
+
+    &::placeholder {
+      color: #aab7c4;
+    }
+
+    &:focus,
+    .StripeElement--focus {
+      box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+        rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+      -webkit-transition: all 150ms ease;
+      transition: all 150ms ease;
+    }
+  }
+
+  .order-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-decoration: none;
+    margin-top: 5%;
+    // background-color: #008cdd;
+    border: 1px solid #008cdd;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    width: 200px;
+    transition: opacity 200ms;
+    cursor: pointer;
+    background: transparent linear-gradient(90deg, #174b78 0%, #028ccb 100%) 0% 0%
+    no-repeat padding-box;
+
+    &.success {
+      background-color: seagreen;
+      border-color: seagreen;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .error-required{
+    font-size: 14px !important;
+    color: red;
+  }
+}

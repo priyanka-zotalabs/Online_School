@@ -1,0 +1,124 @@
+openapi: "3.0.2"
+info:
+  title: LiveClass APIs
+  version: "1.0"
+
+paths:
+  /agora/teacherToken:
+    get:
+      summary: Get Token for Teacher
+      description: Get Token for Teacher
+      tags:
+        - agora
+      parameters:
+        - in: query
+          name: channelName
+          schema:
+            type: string
+        - in: query
+          name: scheduleId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns generateRtcToken for teacher
+  /agora/studentToken:
+    get:
+      summary: Get Token for Student
+      description: Get Get Token for Student
+      tags:
+        - agora
+      parameters:
+        - in: query
+          name: channelName
+          schema:
+            type: string
+        - in: query
+          name: scheduleId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns generateRtcToken for student
+  /agora/schedule:
+    post:
+      summary: Schedule a course
+      description: To schedule a chapter
+      tags:
+        - agora
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - moduleId
+                - chapterId
+                - dateTime
+              properties:
+                courseId:
+                  type: string
+                batchId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+                dateTime:
+                  type: string
+      responses:
+        "200":
+          description: Returns course schedule status
+  /agora/teacherSchedule:
+    get:
+      summary: Get agora Schedule for Teacher
+      description: Get agora Schedule for Teacher
+      tags:
+        - agora
+      parameters:
+        - in: query
+          name: courseId
+          schema:
+            type: string
+        - in: query
+          name: moduleId
+          schema:
+            type: string
+        - in: query
+          name: chapterId
+          schema:
+            type: string
+        - in: query
+          name: batchId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns  agora Schedule for Teacher
+/agora/studentSchedule:
+  get:
+    summary: Get agora Schedule for Student
+    description: Get agora Schedule for Student
+    tags:
+      - agora
+    parameters:
+      - in: query
+        name: courseId
+        schema:
+          type: string
+      - in: query
+        name: moduleId
+        schema:
+          type: string
+      - in: query
+        name: chapterId
+        schema:
+          type: string
+      - in: query
+        name: batchId
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Returns  agora Schedule for Student

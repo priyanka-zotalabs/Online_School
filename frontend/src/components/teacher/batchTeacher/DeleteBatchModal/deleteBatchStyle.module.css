@@ -1,0 +1,39 @@
+#deleteBatchContent {
+  text-align: center;
+  font-size: 16px;
+  /* padding-left: 40px;
+        padding-right:40px; */
+  color:#175592;
+}
+
+.deleteBatchHeaderDiv {
+  text-align: center !important;
+  padding-top: 27px;
+  width: 100%;
+}
+
+#deleteBatchbtns1 {
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 12px;
+
+  color:#8499ff !important;
+ border: #8499ff solid 2px !important;
+    background-color: #FBFAF8 !important;
+}
+
+#deleteBatchbtns {
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 12px;
+}
+
+.modal-dialog .modal-content {
+  border: 0;
+  border-radius: 15px !important;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}

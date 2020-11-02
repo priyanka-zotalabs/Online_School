@@ -1,0 +1,2 @@
+/home/doa/aptron/backend/microservices/databaseConnector/log/20200709-0000-01-access.log
+/home/doa/aptron/backend/microservices/databaseConnector/log/20200709-0000-02-access.log

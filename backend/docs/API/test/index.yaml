@@ -1,0 +1,318 @@
+openapi: "3.0.2"
+info:
+  title: Test APIs
+  version: "1.0"
+
+paths:
+  /test/createTestQuestions:
+    post:
+      summary: Add Test and questions
+      description: Teacher can add test details and questions
+      tags:
+        - test
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - testTitle
+                - testDescription
+                - totalTime
+                - totalQuestions
+                - subject
+                - questions
+              properties:
+                testTitle:
+                  type: string
+                testDescription:
+                  type: string
+                subject:
+                  type: string
+                totalTime:
+                  type: string
+                totalQuestions:
+                  type: string
+                questions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      question:
+                        type: string
+                      numberOfOptions:
+                        type: string
+                      marks:
+                        type: string
+                      correctAnswer:
+                        type: string
+                      explanation:
+                        type: string
+                      options:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            option:
+                              type: string
+                            value:
+                              type: string
+
+      responses:
+        "200":
+          description: Returns test added successfully
+
+  /test/deleteTest:
+    delete:
+      summary: Delete Specific test
+      description: Delete specific course by its id
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: testId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns test deleted successfully
+
+  /test/getAllTests:
+    get:
+      summary: Get All tests
+      description: get All tests
+      tags:
+        - test
+      responses:
+        "200":
+          description: Returns Fetched  All tests
+
+  /test/getSpecificTest:
+    get:
+      summary: Get Specific test
+      description: Get specific test by its id
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: testId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns test fetched successfully
+
+  /test/updateQuestion:
+    put:
+      summary: update Test question
+      description: Teacher can update test questions
+      tags:
+        - test
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - testId
+                - qId
+                - question
+                - numberOfOptions
+                - marks
+                - correctAnswer
+                - explanation
+                - options
+              properties:
+                testId:
+                  type: string
+                qId:
+                  type: string
+                question:
+                  type: string
+                numberOfOptions:
+                  type: string
+                marks:
+                  type: string
+                correctAnswer:
+                  type: string
+                explanation:
+                  type: string
+                options:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                          option:
+                            type: string
+                          value:
+                            type: string
+
+      responses:
+        "200":
+          description: Returns test question updated successfully
+
+  /test/updateTestDetails:
+    put:
+      summary: Update test details
+      description: Teacher can update test details
+      tags:
+        - test
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - testId
+                - testTitle
+                - testDescription
+                - totalTime
+              properties:
+                testId:
+                  type: string
+                testTitle:
+                  type: string
+                testDescription:
+                  type: string
+                totalTime:
+                  type: string
+      responses:
+        "200":
+          description: Returns test details updated successfully
+
+  /test/deleteQuestion:
+    delete:
+      summary: Delete Specific test question
+      description: Delete specific test question
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: testId
+          schema:
+            type: string
+        - in: query
+          name: qId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns test deleted successfully
+
+  /test/getAssignedTest:
+    get:
+      summary: Get Assigned test
+      description: Get Assigned test by its id
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: testId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns test fetched successfully
+
+  /test/assignTest:
+    post:
+      summary: Assign test to a course, module, chapter and batch
+      description: Assign test to a course, module, chapter and batch
+      tags:
+        - test
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - testId
+                - courseId
+                - moduleId
+                - chapterId
+                - batchId
+                - startDate
+                - dueDate
+                - startTime
+              properties:
+                testId:
+                  type: string
+                courseId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+                batchId:
+                  type: string
+                startDate:
+                  type: string
+                dueDate:
+                  type: string
+                startTime:
+                  type: string
+      responses:
+        "200":
+          description: Returns test assigned successfully
+
+  /test/getTeacherBatches:
+    get:
+      summary: Get teacher batches
+      description: Get all batches of teacher
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: teacherId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns batches fetched successfully
+
+  /test/getStudentTests:
+    get:
+      summary: Get student test with status
+      description: Get student test with status
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: array
+            items:
+              type: string
+        - in: query
+          name: studentId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns batches fetched successfully
+
+  /test/getInstituteTests:
+    get:
+      summary: Get institute tests
+      description: Get institute tests for admin
+      tags:
+        - test
+      responses:
+        "200":
+          description: Returns tests fetched successfully
+          
+  /test/getStudentTestDetails:
+    get:
+      summary: Get student test details for admin
+      description: Get student test details for admin
+      tags:
+        - test
+      parameters:
+        - in: query
+          name: studentId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns student test fetched successfully
+

@@ -1,0 +1,72 @@
+.evalution_card{
+  flex-grow: 1;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.evalution_cardHeading{
+  width:'100%';
+}
+
+#paper-test-header {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding: 10px;
+    box-shadow: 0px 2px 10px #00000024;
+    width: 100%;
+  }
+
+  .create-test{
+    text-align: left;
+      padding-left: 10px;
+      font: Bold 18px/43px Roboto;
+      letter-spacing: 0px;
+
+      // change this color
+      color: #246eb8 !important;
+      margin: 0px;
+  }
+  #create-test-btn {
+    background: transparent linear-gradient(90deg, #175592  0%, #8499ff 100%) 0% 0%
+      no-repeat padding-box !important;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    float: right;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  #assign-test-btn{
+    // background: transparent linear-gradient(90deg, #008ccb 0%, #00d9d6 100%) 0% 0%
+    // no-repeat padding-box;
+    background-color: #8499ff !important;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 4px;
+  float: right;
+  border: none;
+  margin-bottom: 2%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 13px;
+  text-decoration:none;
+  color:white;
+  }
+
+  #assign-test-btn:active, 
+  #assign-test-btn:focus 
+ {
+     border:none; /* here configure as your needs */
+     color:white;
+  }
+  #evalution-card-heading-bgcolor{
+    // background: transparent linear-gradient(90deg, #008ccb 0%, #00d9d6 100%) 0% 0%
+    // no-repeat padding-box;
+    
+      // change this color
+
+    background-color: #113F6D !important;
+    color:white;
+  }

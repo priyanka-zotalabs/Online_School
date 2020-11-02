@@ -1,0 +1,47 @@
+openapi: "3.0.2"
+info:
+  title: PayU Payment APIs
+  version: "1.0"
+
+paths:
+  /payu/payment/generateHash:
+    post:
+      summary: Generate Hash for PayU payment
+      description: Student Login required.
+      tags:
+        - payU_Payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                course_name:
+                  type: string
+                amount:
+                  type: string
+                first_name:
+                  type: string
+                # productinfo:
+                #   type: string
+                phone:
+                  type: string
+                email:
+                  type: string
+                # address_line_1:
+                #   type: string
+                # address_line_2:
+                #   type: string
+                # city:
+                #   type: string
+                # state_code:
+                #   type: string
+                # postal_code:
+                #   type: string
+                # country_code:
+                #   type: string
+      responses:
+        "200":
+          description: Returns Generated Hash for PayU payment.
+
+  

@@ -1,0 +1,197 @@
+.sidenav {
+  height: 100%;
+  // width: 20%;
+  width: 15%;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  // background: #eceeef 0% 0% no-repeat padding-box;
+  // box-shadow: 5px 0px 5px #696868d4;
+  // background: #eceeef 0% 0% no-repeat padding-box !important;
+  // background: #0D1925 0% 0% no-repeat padding-box !important;
+  background: #0D1925 0% 0% no-repeat padding-box !important;
+
+
+  // background-color: #eceeef;
+  // box-shadow: 5px 0px 5px #c5c1c1d4;
+  box-shadow: 10px 0px 10px #eceeef;
+  color:white;
+  overflow-x: hidden;
+  // padding-top: 150px;
+  text-align: left;
+}
+// .makeStyles-heading-2 {
+//   font-size: 20px;
+//   color: #2e1f27;
+//   font-size: 18px !important;
+//   font-weight: bold;
+//   padding-left: 5px;
+//   background-color: #eceeef;
+// }
+// .MuiAccordionDetails-root {
+//   display: flex;
+//   padding: 8px 16px 16px;
+//   /* padding-top: 1px !important; */
+//   margin-top: -10% !important;
+//   margin-bottom: -10% !important;
+// }
+// .MuiAccordionSummary-root.Mui-expanded {
+//   min-height: 64px;
+//   margin-top: -10% !important;
+//   /* margin-bottom: 10%; */
+// }
+
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  // font-size: 22px;
+  font-size: 20px;
+  // color: #414243;
+  color:white;
+
+  display: block;
+  margin-top: 6%;
+}
+
+.sidenav i {
+  margin-right: 4%;
+}
+
+.sidenav a:hover {
+  color: white;
+  // background: #c6e1fc;
+  background: #8499FF;
+
+
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 28px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+// .container-for-admin-and-teacher{
+//   // background: #eceeef 0% 0% no-repeat padding-box;
+//   box-shadow: 5px 0px 5px 20px #eceeef;
+// }
+//
+// .sidenav {
+//   height: 100%;
+//   width: 20%;
+//   position: fixed;
+//   z-index: 1;
+//   top: 0;
+//   left: 0;
+//   background: #008ccb 0% 0% no-repeat padding-box;
+//   overflow-x: hidden;
+//   padding-top: 120px;
+//   text-align: left;
+// }
+
+// .sidenav a {
+//   padding: 6px 8px 6px 16px;
+//   text-decoration: none;
+//   font-size: 22px;
+//   color: rgb(255, 255, 255);
+//   display: block;
+//   margin-left: 6%;
+//   margin-top: 6%;
+// }
+
+// .sidenav i {
+//   margin-right: 4%;
+// }
+
+// .sidenav a:hover {
+//   color: white;
+//   background: rgb(30, 151, 207);
+// }
+
+// .main {
+//   margin-left: 160px;
+//   font-size: 28px;
+//   padding: 0px 10px;
+// }
+
+// @media screen and (max-height: 450px) {
+//   .sidenav {
+//     padding-top: 15px;
+//   }
+//   .sidenav a {
+//     font-size: 18px;
+//   }
+// }
+
+
+
+// Link{
+//   font-size: 13px !important;
+// }
+
+#sidebarLink{
+  font-size: 18px;
+}
+@media (max-width: 767px) and (min-width: 411px) {
+  .sidenav {
+    padding-top: 60px;
+    width:17% !important;
+  }
+  #sidebarLink{
+    font-size: 11px;
+  }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+  .sidenav {
+    padding-top: 70px;
+    width:17% !important;
+ 
+  }
+  #sidebarLink{
+    font-size: 11px;
+  }
+
+  
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .sidenav {
+    padding-top: 68px;
+    width:16% !important;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1439px) {
+
+  .sidenav {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .sidenav {
+    padding-top: 75px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .sidenav {
+        padding-top: 90px;
+      }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.Iframe {
+  /* overflow: auto; 
+    margin: 0px; 
+    padding: 0px; 
+    height: 100%; 
+    border: none; 
+    display: block; 
+    width: 100%; 
+    border: none; 
+    overflow-y: auto; 
+    overflow-x: hidden; */
+
+
+  font-family: sans-serif;
+  text-align: start;
+  /* margin-top: 3%; */
+  background: #ffffff 0% 0% no-repeat padding-box;
+}
+#card-accordian-teacher-image {
+  border-radius: 0 !important;
+  position: relative;
+  z-index: 100;
+}
+#card-accordian-teacher {
+  border-radius: 0 !important;
+  position: relative;
+  z-index: 100;
+  /* padding-top: 30px; */
+}
+#card-accordian-body-teacher {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/*  */
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+
+.Iframe {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 3%;
+} */
+/* .MuiTab-wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px !important;
+} */
+
+/* html { 
+  overflow: auto; 
+}  */
+
+/* html,  */
+/* body, 
+div, 
+.iframe { 
+  overflow: auto; 
+    margin: 0px; 
+    padding: 0px; 
+    height: 100%; 
+    border: none; 
+} 
+  
+iframe { 
+    display: block; 
+    width: 100%; 
+    border: none; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+} */

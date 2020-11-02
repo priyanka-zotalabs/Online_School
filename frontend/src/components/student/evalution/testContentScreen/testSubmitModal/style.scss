@@ -1,0 +1,87 @@
+#addQuestionModalBody {
+  text-align: center;
+  font-size: 13px;
+  padding-left: 40px;
+  padding-right: 40px;
+  // padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.addQuestionModalBodyDiv {
+  text-align: center;
+
+  // padding-right: 55px;
+  // padding-left: 55px;
+  padding-top: 27px;
+  // padding-bottom: 27px;
+}
+// .addQuestionModalBodypara{
+//     // padding-right: 55px;
+//     // padding-left: 55px;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+// }
+#QuestionModalHeading {
+  text-align: center !important;
+  //   padding:25px;
+  // padding-right: 20px;
+  //     padding-left: 55px;
+  padding-top: 15px;
+  // padding-bottom: 15px;
+
+  color:  #175592;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#addQuestionbtns {
+  float: left;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 12px;
+}
+
+.modal-dialog .modal-content {
+  border: 0;
+  border-radius: 15px !important;
+  /* border-radius: .2255rem; */
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.score_Modal_heading {
+  /* text-align: left; */
+  text-align: center !important;
+  /* padding-left: 25px; */
+  /* font: Bold 18px/43px Roboto; */
+  font: Bold 20px Roboto;
+  /* font-size: 16px; */
+  letter-spacing: 0px;
+  color:  #175592;
+  /* margin: 0px;
+       */
+  //    margin-bottom:5%;
+  //    margin-top: 3%;
+}
+#addquestionModalHeading {
+  text-align: center !important;
+  color:  #175592;
+  // margin-top: 5%;
+  /* margin-bottom:3%; */
+  width: 100%;
+}
+
+// #detele-course-btn {
+//     background: transparent linear-gradient(90deg, #008ccb 0%, #00d9d6 100%) 0% 0% no-repeat padding-box ;
+//   box-shadow: 0px 3px 6px #00000029;
+//   border-radius: 25px important;
+//   float:left;
+// }
+
+// #cancel-course{
+//     float:right !important;
+//     // background-color: #412c2c09 !important;
+//     box-shadow: 0px 3px 6px #00000029;
+//   border-radius: 25px important;
+// }

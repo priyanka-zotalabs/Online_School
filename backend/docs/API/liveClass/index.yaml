@@ -1,0 +1,117 @@
+openapi: "3.0.2"
+info:
+  title: LiveClass APIs
+  version: "1.0"
+
+paths:
+  /liveClass/allDBSchedule:
+    get:
+      summary: Get all DB Schedule's 
+      description: Get All DB Schedule
+      tags:
+        - LiveClass
+      responses:
+        "200":
+          description: Returns All DB Schedule 
+  /liveClass/teacherSchedule:
+    get:
+      summary: Get all Schedule of Teacher
+      description: Get All Schedule for Teacher
+      tags:
+        - LiveClass
+      responses:
+        "200":
+          description: Returns All Schedule for Teacher
+  /liveClass/studentSchedule:
+    get:
+      summary: Get all Schedule of Student
+      description: Get All Schedule for Student
+      tags:
+        - LiveClass
+      responses:
+        "200":
+          description: Returns All Schedule for Student
+  /liveClass/student/join:
+    get:
+      summary: Get for student to join live class
+      description: Student can join to the live class using the link
+      tags:
+        - LiveClass
+      parameters:
+        - in: query
+          name: scheduleId
+          schema:
+            type: string
+        - in: query
+          name: courseId
+          schema:
+            type: string
+        - in: query
+          name: moduleId
+          schema:
+            type: string
+        - in: query
+          name: chapterId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns fetched link successfully
+
+  /liveClass/teacher/create:
+    get:
+      summary: Get for teacher to create live class
+      description: Teacher can create to the live class & provide the link
+      tags:
+        - LiveClass
+      parameters:
+        - in: query
+          name: scheduleId
+          schema:
+            type: string
+        - in: query
+          name: courseId
+          schema:
+            type: string
+        - in: query
+          name: moduleId
+          schema:
+            type: string
+        - in: query
+          name: chapterId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns live class created successfully
+
+  /liveClass/guest/join:
+    post:
+      summary: Get for guest to join live class
+      description: Guest can join to the live class using the link
+      tags:
+        - LiveClass
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                # - courseId
+                # - moduleId
+                # - chapterId
+              properties:
+                name:
+                  type: string
+                scheduleId:
+                  type: string
+                courseId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+      responses:
+        "200":
+          description: Returns fetched link successfully

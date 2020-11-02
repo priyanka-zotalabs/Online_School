@@ -1,0 +1,560 @@
+openapi: "3.0.2"
+info:
+  title: Authentication APIs
+  version: "1.0"
+
+paths:
+  # /authentication/admin/signup:
+  #   post:
+  #     summary: Signup admin to application
+  #     description: Signup admin to application with email 
+  #     tags:
+  #       - Authentication
+  #     requestBody:
+  #       required: true
+  #       content:
+  #         application/json:
+  #           schema:
+  #             required:
+  #               - name
+  #               - email
+  #               - password
+  #             properties:
+  #               name:
+  #                 type: string
+  #               email:
+  #                 type: string
+  #               password:
+  #                 type: string
+  #     responses:
+  #       "200":
+  #         description: Returns success of signup 
+
+  /authentication/login:
+    post:
+      summary: Login user to application
+      description: Login/signIn user to application
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Returns success of login/signIn and user details
+  /authentication/mobileLogin:
+    post:
+      summary: Login user to application using Contact number
+      description: Login/signIn user to application  using Contact number
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - username
+                - password
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Returns success of Contact number login/signIn and user details
+
+  /authentication/user:
+    get:
+      summary: Get active user details
+      description: Get active user details
+      tags:
+        - Authentication
+      responses:
+        "200":
+          description: Returns Active user session
+
+  /authentication/logout:
+    get:
+      summary: Log's out active user
+      description: Logout for user session
+      tags:
+        - Authentication
+      responses:
+        "200":
+          description: Returns success message
+
+  /authentication/recover:
+    post:
+      summary: Recover password email
+      description: Send user password recovery email
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - email
+              properties:
+                email:
+                  type: string
+      responses:
+        "200":
+          description: Returns Recovery email sent
+
+  /authentication/validateToken/{token}:
+    get:
+      summary: Token Validation
+      description: Validate token sent in password recovery email
+      tags:
+        - Authentication
+      parameters:
+        - in: path
+          name: token
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns Password recovery link is valid
+
+  /authentication/resetPassword/{token}:
+    post:
+      summary: Reset user password
+      description: Reset user password using password recovery link
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - password
+                - confirmPassword
+              properties:
+                password:
+                  type: string
+                confirmPassword:
+                  type: string
+      parameters:
+        - in: path
+          name: token
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns Password has been reset successfully using the link
+
+  /authentication/changePassword:
+    post:
+      summary: Change active user's password
+      description: Change active user's password
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - currentPassword
+                - newPassword
+                - confirmPassword
+              properties:
+                currentPassword:
+                  type: string
+                newPassword:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        "200":
+          description: Returns Password has been changed successfully
+
+  /authentication/student/signUp/mobile:
+    post:
+      summary: Student Signup using mobile number step one
+      description: Student Signup using mobile number step one
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - countryCode
+                - contactNumber
+              properties:
+                countryCode:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns success if sent else error
+
+  /authentication/student/signUp/verifyMobileOTP:
+    post:
+      summary: Verify the OTP sent for student signup
+      description: Verify the OTP sent for student signup
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - code
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: Returns successfully
+
+  /authentication/student/signUp/email:
+    post:
+      summary: Student Signup with email
+      description: Student Signup with email
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - email
+              properties:
+                email:
+                  type: string
+      responses:
+        "200":
+          description: Returns signed up successfully using email
+
+  /authentication/student/signUp/verifyEmail:
+    post:
+      summary: Verify teacher email 
+      description: Verify teacher email through otp
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - code
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: Returns Otp verified for the email
+          
+  /authentication/student/signUp/addUser:
+    post:
+      summary: Student Signup after entering mobile otp or email
+      description: Student Signup after entering mobile otp or email
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                # - gradeCode
+                # - boardCode
+                - password
+                - confirmPassword
+              properties:
+                name:
+                  type: string
+                # gradeCode:
+                #   type: integer
+                # boardCode:
+                #   type: integer
+                password:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        "200":
+          description: Returns Signed up successfully status
+
+  /authentication/student/signIn/mobile:
+    post:
+      summary: Student signIn using mobile number step one 
+      description: Student signIn using mobile number step one
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - countryCode
+                - contactNumber
+              properties:
+                countryCode:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns success if sent else error
+
+  /authentication/student/signIn/verifyMobileOTP:
+    post:
+      summary: Verify the OTP sent for student signIn 
+      description: Verify the OTP sent for student signIn 
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - code
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: Return success
+
+  /authentication/teacher/signUp/mobile:
+    post:
+      summary: Teacher Signup using mobile number step one 
+      description: Teacher Signup using mobile number step one 
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - countryCode
+                - contactNumber
+              properties:
+                countryCode:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns success if sent else error
+
+  /authentication/teacher/signUp/verifyMobileOTP:
+    post:
+      summary: Verify the OTP sent for signup and add teacher
+      description: Verify the OTP sent for signup and teacher
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - code
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: Returns Signup successfully
+
+  /authentication/teacher/signUp/email:
+    post:
+      summary: Teacher Signup with email
+      description: Teacher Signup with email
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - email
+              properties:
+                email:
+                  type: string
+      responses:
+        "200":
+          description: Returns signed up successfully using email
+      
+  /authentication/teacher/signUp/verifyEmail:
+    post:
+      summary: Verify teacher email 
+      description: Verify teacher email through otp
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - code
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: Returns Otp verified for the email
+
+  /authentication/teacher/signUp/addUser:
+    post:
+      summary: Teacher Signup after entering email
+      description: Teacher Signup after entering email
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                - password
+                - confirmPassword
+              properties:
+                name:
+                  type: string
+                password:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        "200":
+          description: Returns Signed up successfully status
+
+  /authentication/teacher/signIn/mobile:
+    post:
+      summary: Teacher signIn using mobile number step one 
+      description: Teacher signIn using mobile number step one 
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - countryCode
+                - contactNumber
+              properties:
+                countryCode:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns success if sent else error
+
+  /authentication/teacher/signIn/verifyMobileOTP:
+    post:
+      summary: Verify the OTP sent for teacher signIn
+      description: Verify the OTP sent for teacher signIn
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - code
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: Return success
+
+  /authentication/updateName:
+    put:
+      summary: Update name of user
+      description: Update name of teacher or student
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+      responses:
+        "200":
+          description: Returns name successfully updated
+
+  /authentication/updateEmail:
+    put:
+      summary: Update email of user
+      description: Update email of teacher or student
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - email
+              properties:
+                email:
+                  type: string
+      responses:
+        "200":
+          description: Returns email successfully updated
+
+  /authentication/updateContactNumber:
+    put:
+      summary: Update contact number of user
+      description: Update contact number of teacher or student
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - contactNumber
+                - countryCode
+              properties:
+                contactNumber:
+                  type: string
+                countryCode:
+                  type: string
+      responses:
+        "200":
+          description: Returns contact number successfully updated

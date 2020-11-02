@@ -1,0 +1,81 @@
+openapi: "3.0.2"
+info:
+  title: Test Evaluation APIs
+  version: "1.0"
+
+paths:
+  /testEvaluation:
+    post:
+      summary: Evaluate student's test and calculate score
+      description: Student's login required.
+      tags:
+        - Test Evaluation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - testId
+                - batchId
+                - questions
+              properties:
+                testId:
+                  type: string
+                batchId:
+                  type: string
+                questions:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      qId:
+                        type: string
+                      question:
+                        type: string
+                      markedAnswer:
+                        type: string
+      responses:
+        "200":
+          description: Returns test submited successfully and score calculated.
+
+    get:
+      summary: Get scores of a student for a particular test.
+      description: Student login required. Get scores of a test of a student.
+      tags:
+        - Test Evaluation
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+        - in: query
+          name: testId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns scores of a student for a particular test.
+
+  /testEvaluation/getScoresForTest:
+    get:
+      summary: Get  scores for a test 
+      description: Get scores for a test by testId  and batchId
+      tags:
+        - Test Evaluation
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+        - in: query
+          name: testId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns scores fetched successfully
+
+    
+
+  

@@ -1,0 +1,15 @@
+openapi: "3.0.2"
+info:
+  title: Payment Details
+  version: "1.0"
+
+paths:
+  /paypal/payment:
+    get:
+      summary: GET all payment details.
+      description: Can be fetch by Admin/Teacher/Student 
+      tags:
+        - Payment_Details
+      responses:
+        "200":
+          description: Returns all the payment details.

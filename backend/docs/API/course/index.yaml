@@ -1,0 +1,189 @@
+openapi: "3.0.2"
+info:
+  title: Course APIs
+  version: "1.0"
+
+paths:
+  /course:
+    post:
+      summary: Add course
+      description: Teacher can add course with details
+      tags:
+        - Course
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                # - gradeCode
+                # - boardCode
+                - subjectName
+                - introduction
+                # - examCode
+              properties:
+                name:
+                  type: string
+                # gradeCode:
+                #   type: integer
+                # boardCode:
+                #   type: integer
+                subjectName:
+                  type: string
+                introduction:
+                  type: string
+                # examCode: 
+                #   type: string
+      responses:
+        "200":
+          description: Returns course added successfully
+    get:
+      summary: Get course details
+      description: Can get all Courses status filter available-'PENDING','APPROVED','REJECTED','APPROVED/REJECTED'
+      tags:
+        - Course
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns course details
+
+  /course/teacher/courses:
+    get:
+      summary: Get course details of a teacher
+      description: Can get all Courses of a teacher, status filter available-'PENDING','APPROVED','REJECTED','APPROVED/REJECTED'
+      tags:
+        - Course
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns course details of teacher
+  
+  /course/approve:
+    put:
+      summary: Approve a course
+      description: Approve a course and update the details
+      tags:
+        - Course
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - courseId
+                - dateTime
+                - courseImage
+              properties:
+                courseId:
+                  type: string
+                dateTime:
+                  type: string
+                courseImage:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Returns course approval updated 
+
+  /course/reject:
+    put:
+      summary: Reject a course
+      description: Reject a course and update the details 
+      tags:
+        - Course
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - reason
+              properties:
+                courseId:
+                  type: string
+                reason:
+                  type: string
+      responses:
+        "200":
+          description: Returns course rejection updated
+          
+  /course/upcomingCourse:
+    get:
+      summary:  Upcoming courses
+      description: Get all the upcoming courses
+      tags:
+        - Course
+      responses:
+        "200":
+          description: Returns Upcoming courses fetched
+
+  /course/registerCourse:
+    put:
+      summary: Student Register for a course
+      description: Student Register for a course and details are updated
+      tags:
+        - Course
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - amount
+                - paymentMethod
+                - transaction_id
+                - name
+                - contactNumber
+              properties:
+                courseId:
+                  type: string
+                amount:
+                  type: string
+                paymentMethod:
+                  type: string
+                transaction_id:
+                  type: string
+                name:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns Course registration successful
+  
+  /course/registeredCourse:
+    get:
+      summary: Student gets its registered courses
+      description: Student gets its registered courses
+      tags:
+        - Course
+      responses:
+        "200":
+          description: Returns Fetched courses registered by student
+
+  /course/getSpecificCourse:
+    get:
+      summary: Get Specific course
+      description: Get specific course by its id
+      tags:
+        - Course
+      parameters:
+        - in: query
+          name: courseId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns course details 

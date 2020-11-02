@@ -1,0 +1,102 @@
+openapi: "3.0.2"
+info:
+  title: Discussion Forum APIs
+  version: "1.0"
+
+paths:
+  /discussionForum:
+    post:
+      summary: Start discussion
+      description: Start discussion
+      tags:
+        - Discussion Forum
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - batchId
+                - moduleId
+                - chapterId
+                - contentId
+                - message
+                - role
+              properties:
+                courseId:
+                  type: string
+                batchId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+                contentId:
+                  type: string
+                message:
+                  type: string
+                role:
+                  type: string
+      responses:
+        "200":
+          description: Returns discussion added successfully
+
+    put:
+      summary: Add a message in discussion
+      description: Update discussion
+      tags:
+        - Discussion Forum
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - batchId
+                - moduleId
+                - chapterId
+                - contentId
+                - message
+                - role
+              properties:
+                courseId:
+                  type: string
+                batchId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+                contentId:
+                  type: string
+                message:
+                  type: string
+                role:
+                  type: string
+      responses:
+        "200":
+          description: Returns chat updated successfully
+
+    get:
+      summary: Get all discussions
+      description: Get all the discussions 
+      tags:
+        - Discussion Forum
+      parameters:
+        - in: query
+          name: courseId
+          schema:
+            type: string
+        - in: query
+          name: batchId
+          schema:
+            type: string
+        - in: query
+          name: contentId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns all the discussions for a particular content.

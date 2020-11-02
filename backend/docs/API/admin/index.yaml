@@ -1,0 +1,154 @@
+openapi: "3.0.2"
+info:
+  title: Admin APIs
+  version: "1.0"
+
+paths:
+  /admin/profile:
+    get:
+      summary: Get active logged in admin data
+      description: Need to login to access the API
+      tags:
+        - Admin
+      responses:
+        "200":
+          description: Returns active logged in admin Profile Details
+  # /admin/institute:
+  #   get:
+  #     summary: Get active logged in admin Institute Details
+  #     description: Need to login to access the API
+  #     tags:
+  #       - Admin
+  #     responses:
+  #       "200":
+  #         description: Returns active logged in admin Institute Details
+  /admin/signup:
+    post:
+      summary: Signup admin to application
+      description: Signup admin to application with email
+      tags:
+        - Admin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                # - name
+                - email
+                # - password
+              properties:
+                # name:
+                #   type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                # aboutMe:
+                #   type: string
+                # subject:
+                #   type: string
+                # imageUrl:
+                #   type: string
+                # contactNumber:
+                #   type: string
+                # board:
+                #   type: string
+                # location:
+                #   type: string
+                # website:
+                #   type: string
+                # brochureUrl:
+                #   type: string
+      responses:
+        "200":
+          description: Returns success of signup
+  /admin/instituteProfile:
+    get:
+      summary: Get Institute Profile
+      description: Can get Institute Profile
+      tags:
+        - Admin
+      responses:
+        "200":
+          description: Returns Institute Profile details
+  /admin/updateInstituteProfile:
+    put:
+      summary: update Institute Profile
+      description: update Institute Profile
+      tags:
+        - Admin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+              properties:
+                name:
+                  type: string
+                aboutMe:
+                  type: string
+                subject:
+                  type: string
+                imageUrl:
+                  type: string
+                contactNumber:
+                  type: string
+                board:
+                  type: string
+                location:
+                  type: string
+                website:
+                  type: string
+                brochureUrl:
+                  type: string
+      responses:
+        "200":
+          description: Returns success of update Institute Profile
+  /admin/instituteTeachers:
+    get:
+      summary: Get All teacher whose status is COMPLETED
+      description: Get All teacher whose status is COMPLETED
+      tags:
+        - Admin
+      responses:
+        "200":
+          description: Returns Get All teacher whose status is COMPLETED
+  /admin/instituteCourses:
+    get:
+      summary: Get  All Courses for Institute
+      description: Can get All Courses for Institute
+      tags:
+        - Admin
+      responses:
+        "200":
+          description: Returns  All Courses for Institute
+  /admin/instituteSchedule:
+    get:
+      summary: Get  All Schedule for Institute
+      description: Can get All Schedule for Institute
+      tags:
+        - Admin
+      responses:
+        "200":
+          description: Returns  All Schedule for Institute
+  # /admin/student:
+  #   get:
+  #     summary: Get student details
+  #     description: Can get all Student
+  #     tags:
+  #       - Admin
+  #     responses:
+  #       "200":
+  #         description: Returns student details
+  # /admin/registeredStudents:
+  #   get:
+  #     summary: Get registered student details
+  #     description: Can get all registered Students
+  #     tags:
+  #       - Admin
+  #     responses:
+  #       "200":
+  #         description: Returns student details

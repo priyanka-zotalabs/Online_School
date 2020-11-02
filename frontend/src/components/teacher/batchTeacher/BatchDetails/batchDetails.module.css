@@ -1,0 +1,32 @@
+#paper_batch_header {
+  margin-top: 3%;
+  padding: 10px;
+  box-shadow: 0px 2px 10px #00000024;
+  width: 100%;
+}
+.create_batch {
+  text-align: left;
+  font: Bold 16px Roboto;
+  letter-spacing: 0px;
+  color: #175592 !important ;
+  margin: 0px;
+}
+
+.create_batch_discription {
+  font: 14px Roboto;
+  letter-spacing: 0px;
+  color: #175592 !important ;
+}
+
+#assign_batch_btn {
+  background-color: #8499ff   !important;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 4px;
+
+  margin-top: 2%;
+  margin-left: 40%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 18px;
+  padding-right: 18px;
+}

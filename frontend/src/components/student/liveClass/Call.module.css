@@ -1,0 +1,74 @@
+.call {
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.player_container {
+  padding: 20px;
+  text-align: initial;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-group {
+  /* padding: 20px; */
+}
+
+.call-form {
+  padding: 20px;
+}
+
+input, button {
+  /* margin-right: 10px; */
+}
+
+.join
+{
+  background-color: #8499ff;
+  font-weight: bold;
+  color: white;
+}
+
+.liveclassText
+{
+  font-weight: bold;
+}
+.leave
+{
+  background-color: #8499ff;
+  font-weight: bold;
+  color: white;
+}
+
+.paper_test_header {
+  margin-top: 2%;
+  padding: 10px;
+  box-shadow: 0px 2px 10px #00000024;;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.paper_test_start {
+  margin-top: 5%;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 2px 10px #00000024;;
+  background-color: #8499ff;
+  width: 100%;
+}
+.liveclass_Text{
+    text-align: left;
+    /* padding-left: 25px; */
+    /* font: Bold 18px/43px Roboto; */
+     font: Bold 16px Roboto;
+    /* font-size: 16px; */
+    letter-spacing: 0px;
+    color: #175592;
+    padding: 10px;
+}

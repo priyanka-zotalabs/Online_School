@@ -1,0 +1,156 @@
+openapi: "3.0.2"
+info:
+  title: Fee Structure API's
+  version: "1.0"
+
+paths:
+  /feeStructure:
+    post:
+      summary: Add fee structure to a batch
+      description: Admin login required
+      tags:
+        - FeeStructure
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - batchId
+                - name
+                - amount
+              properties:
+                batchId:
+                  type: string
+                name:
+                  type: string
+                amount:
+                  type: string
+                tax:
+                  type: string
+                totalAmount:
+                  type: string
+                currency:
+                  type: string
+                numberOfInstallments:
+                  type: string
+                durationBetweenInstallments:
+                  type: string
+                installmentCalculator:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      date:
+                        type: string
+                      amount:
+                        type: string
+      responses:
+        "200":
+          description: Returns fee structure added to batch successfully
+
+    put:
+      summary: Update fee structure in a batch
+      description: Admin login required
+      tags:
+        - FeeStructure
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - feeStructureId
+                - batchId
+                - name
+                - amount
+              properties:
+                batchId:
+                  type: string
+                feeStructureId:
+                  type: string
+                name:
+                  type: string
+                amount:
+                  type: string
+                tax:
+                  type: string
+                totalAmount:
+                  type: string
+                currency:
+                  type: string
+                numberOfInstallments:
+                  type: string
+                durationBetweenInstallments:
+                  type: string
+                installmentCalculator:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      date:
+                        type: string
+                      amount:
+                        type: string
+      responses:
+        "200":
+          description: Returns fee structure updated to batch successfully
+
+    delete:
+      summary: Delete fee structure from a batch
+      description: Admin login required
+      tags:
+        - FeeStructure
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - feeStructureId
+                - batchId
+              properties:
+                batchId:
+                  type: string
+                feeStructureId:
+                  type: string
+      responses:
+        "200":
+          description: Returns fee structure deleted in batch successfully
+
+  /feeStructure/batchId/{batchId}:
+    get:
+      summary: Get all fee structure from a batch
+      description: Admin login required
+      tags:
+        - FeeStructure
+      parameters:
+        - name: batchId
+          in: path
+          description: BATCH ID
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns all fee structure in batch successfully
+
+  /feeStructure/getStudentFeeDetailsForAdmin:
+    get:
+      summary: Get all fee structure of a student for admin
+      description: Get all fee structure of a student for admin
+      tags:
+        - FeeStructure
+      parameters:
+        - in: query
+          name: studentId
+          schema:
+            type: string
+        - in: query
+          name: instituteId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns student fee structures fetched successfully
+

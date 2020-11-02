@@ -1,0 +1,66 @@
+openapi: "3.0.2"
+info:
+  title: Course APIs
+  version: "1.0"
+
+paths:
+  /teacherOnboarding:
+    post:
+      summary: Onborded a Teacher
+      description: Onborded a Teacher
+      tags:
+        - teacherOnboarding
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                - email
+                - contactNumber
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns Teacher Onboarded successfully
+    get:
+      summary: Get onboarded Teacher for Admin
+      description: Get onboarded Teacher for Admin
+      tags:
+        - teacherOnboarding
+      responses:
+        "200":
+          description: Returns Get onboarded Teacher Details
+
+  /teacherOnboarding/firstLoginChangePassword:
+    post:
+      summary: Change first time Login ChangePassword 
+      description: Change first time Login ChangePassword 
+      tags:
+        - teacherOnboarding
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - currentPassword
+                - newPassword
+                - confirmPassword
+              properties:
+                currentPassword:
+                  type: string
+                newPassword:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        "200":
+          description: Returns Password has been changed successfully
+    

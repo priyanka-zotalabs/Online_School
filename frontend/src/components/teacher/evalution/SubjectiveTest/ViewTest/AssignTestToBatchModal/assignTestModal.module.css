@@ -1,0 +1,57 @@
+#addQuestionModalBody{
+    text-align: center;
+}
+
+#addQuestionModalHeading{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    /* font: Bold 18px Roboto; */
+    color: #175592;
+    margin-bottom:3%;
+    margin-top: 3%;
+}
+
+.assign_batch_modal_heading{
+    
+    text-align: center;
+       font: Bold 20px Roboto;
+      letter-spacing: 0px;
+      color: #175592;
+       margin-bottom:3%;
+       margin-top: 3%;
+  }
+
+  #assign_test_btn{
+    /* background: transparent linear-gradient(90deg, #008ccb 0%, #00d9d6 100%) 0% 0%
+      no-repeat padding-box; */
+      background-color:#8499ff  !important;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    margin-left:42%;
+    margin-Top:3%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+  }
+
+
+
+
+.score_Modal_heading{
+
+  text-align: center !important;
+     font: Bold 20px Roboto;
+    letter-spacing: 0px;
+    color: #175592;
+     margin-bottom:10%;
+     margin-top: 3%;
+}
+#testScoreModalHeading{
+  text-align: center !important;
+  color:#175592;
+  margin-top: 5%;
+  width: 100%;
+}

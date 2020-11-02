@@ -1,0 +1,26 @@
+#addStudent_btn {
+  background-color: #8499ff !important;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 4px;
+  margin-left: 42%;
+  margin-top: 3%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#addstudentModalHeading {
+  text-align: center !important;
+  color: #175592;
+  margin-top: 5%;
+  width: 100%;
+}
+.addStudent_Modal_heading {
+  text-align: center !important;
+  font: Bold 20px Roboto;
+  letter-spacing: 0px;
+  color: #175592;
+  margin-bottom: 10%;
+  margin-top: 3%;
+}

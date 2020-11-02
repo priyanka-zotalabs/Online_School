@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        /*{
+            "type": "node",
+            "request": "launch",
+            "name": "DEPLOY_USER_IDENTITY",
+            "program": "${workspaceFolder}/backend/microservices/blockchainConnector/contracts/contractDeployment/deployUserIdentity.js",
+            "cwd": "${workspaceFolder}/backend/microservices/blockchainConnector/",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DEPLOY_DOCUMENT_STORAGE",
+            "program": "${workspaceFolder}/backend/microservices/blockchainConnector/contracts/contractDeployment/deployDocumentStorage.js",
+            "cwd": "${workspaceFolder}/backend/microservices/blockchainConnector/",
+            "outFiles": []
+        },*/
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "WEB_APP",
+            "program": "${workspaceFolder}/backend/bin/www",
+            "cwd": "${workspaceFolder}/backend",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "CRON",
+            "program": "${workspaceFolder}/backend/cron/index.js",
+            "cwd": "${workspaceFolder}/backend",
+            "outFiles": []
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DB_MICROSERVICE",
+            "program": "${workspaceFolder}/backend/microservices/databaseConnector/index.js",
+            "cwd": "${workspaceFolder}/backend/microservices/databaseConnector",
+            "outFiles": []
+        },
+        /*{
+            "type": "node",
+            "request": "launch",
+            "name": "BLOCKCHAIN_MICROSERVICE",
+            "program": "${workspaceFolder}/backend/microservices/blockchainConnector/index.js",
+            "cwd": "${workspaceFolder}/backend/microservices/blockchainConnector",
+            "outFiles": []
+        },*/
+        {
+            "name": "Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceRoot}/frontend/university-certificate/src"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "DB_MIGRATE",
+            "program": "${workspaceFolder}/backend/node_modules/db-migrate/bin/db-migrate",
+            "cwd": "${workspaceFolder}/backend/",
+            "args": [
+                "up"
+            ],
+            "outFiles": []
+        }
+    ],
+    "compounds": [
+        {
+            "name": "WEB_APP + ALL_MICROSERVICES",
+            "configurations": [
+                "WEB_APP",
+                "DB_MICROSERVICE"
+            ]
+        }
+    ],
+}

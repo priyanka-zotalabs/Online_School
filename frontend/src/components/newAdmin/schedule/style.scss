@@ -1,0 +1,118 @@
+@import "../../../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../../../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+/* @import "../../../../node_modules/@syncfusion/ej2-split-buttons/styles/material.css"; */
+@import "../../../../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+
+#EventLog b {
+  color: #388e3c;
+}
+
+hr {
+  margin: 1px 10px 1px 0px;
+  border-top: 1px solid #eee;
+}
+
+.e-textlabel {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.custom-event-editor td {
+  padding: 5px;
+}
+
+.e-quick-popup-wrapper .e-cell-content {
+  padding: 0 10px 10px 10px;
+}
+
+.e-quick-popup-wrapper .e-cell-content div {
+  padding-bottom: 10px;
+}
+
+.e-quick-popup-wrapper .e-cell-content .e-field {
+  border-left-width: 0;
+  border-top-width: 0;
+  border-right-width: 0;
+  height: 25px;
+  width: 100%;
+}
+
+.e-quick-popup-wrapper .e-event-content {
+  display: flex;
+}
+
+.e-quick-popup-wrapper .e-event-header {
+  position: absolute;
+  right: 0;
+  //   background-color: rgba(12, 12, 160, 0.692);
+  color: black !important;
+}
+
+.e-quick-popup-wrapper .e-cell-footer .e-event-create,
+.e-quick-popup-wrapper .e-event-footer .e-event-edit {
+  position: absolute;
+  right: 0;
+}
+
+.e-quick-popup-wrapper .e-event-footer .e-event-delete {
+  padding-left: 100px;
+}
+
+.e-quick-popup-wrapper .e-event-content .subject {
+  padding-top: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  color: red !important;
+
+  /* background-color: blue; */
+}
+.e-close {
+  color: black !important;
+}
+
+.e-schedule .e-vertical-view .e-alternate-cells {
+  border-bottom-style: none !important;
+}
+.e-schedule .e-vertical-view {
+  border: solid 1px #9da8e2 !important;
+}
+.e-schedule .e-vertical-view .e-work-cells {
+  border-color: #9da8e2;
+}
+
+tr.e-header-row .e-header-cells {
+  background-color: #f9a7c285 !important;
+}
+
+.e-schedule .e-vertical-view .e-left-indent-wrap table tbody td {
+  background-color: #f9a7c285 !important;
+}
+.e-schedule .e-vertical-view .e-time-cells-wrap table td {
+  border-right-color: #9da8e2;
+  // border-bottom-style: none ;
+  // border-top-style:red !important;
+}
+.e-schedule .e-vertical-view .e-time-cells-wrap .e-time-cells {
+  border-bottom-color: #9da8e2 !important;
+}
+// Date & Week top nav bar
+.e-schedule .e-vertical-view .e-date-header-wrap table tbody td {
+  border-color: #9da8e2;
+  border-bottom-color: #9da8e2 !important;
+  border-width: 0px 0px 1px 1px;
+}
+.e-schedule .e-vertical-view .e-left-indent-wrap table tbody td {
+  border-right-color: #9da8e2 !important;
+  border-bottom-color: #9da8e2 !important;
+}
+.schedule-control-section{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 6px #0000000A;
+opacity: 1;
+}

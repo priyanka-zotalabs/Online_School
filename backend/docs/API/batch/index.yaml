@@ -1,0 +1,191 @@
+openapi: "3.0.2"
+info:
+  title: Batch APIs
+  version: "1.0"
+
+paths:
+  /batch/createBatch:
+    post:
+      summary: Create batch
+      description: create batch
+      tags:
+        - batch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - name
+                - teacher
+                - startDate
+                - endDate
+              properties:
+                courseId:
+                  type: string
+                name:
+                  type: string
+                teacher:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      teacherId:
+                        type: string
+                startDate:
+                  type: string
+                endDate:
+                  type: string
+
+      responses:
+        "200":
+          description: Returns batch created successfully
+
+  /batch/getAllBatches:
+    get:
+      summary: Get All batches
+      description: get All batches
+      tags:
+        - batch
+      responses:
+        "200":
+          description: Returns Fetched  All batches
+
+  /batch/getSpecificBatch:
+    get:
+      summary: Get Specific batch
+      description: Get specific batch by its id
+      tags:
+        - batch
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns batch fetched successfully
+
+  /batch/updateBatch:
+    put:
+      summary: Edit batch details
+      description: Edit batch details
+      tags:
+        - batch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - batchId
+                - courseId
+                - name
+                - teacher
+                - startDate
+                - endDate
+              properties:
+                batchId:
+                  type: string
+                courseId:
+                  type: string
+                name:
+                  type: string
+                teacher:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      teacherId:
+                        type: string
+                startDate:
+                  type: string
+                endDate:
+                  type: string
+
+      responses:
+        "200":
+          description: Returns batch updated successfully
+
+  /batch/deletebatch:
+    delete:
+      summary: Delete Specific batch
+      description: Delete specific batch by its id
+      tags:
+        - batch
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns batch deleted successfully
+
+  /batch/addStudent:
+    post:
+      summary: add student
+      description: add student to batch
+      tags:
+        - batch
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - batchId
+                - students
+              properties:
+                batchId:
+                  type: string
+                students:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      studentId:
+                        type: string
+                      name:
+                        type: string
+                      feeStructure:
+                        type: string
+
+      responses:
+        "200":
+          description: Returns students added successfully
+
+  /batch/deleteStudent:
+    delete:
+      summary: Delete Specific student
+      description: Delete specific student by student and batch id
+      tags:
+        - batch
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+        - in: query
+          name: studentId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns student removed successfully
+
+  /batch/getTestsForBatch:
+    get:
+      summary: Get all tests for a batch
+      description: Get all tests for a batch by its id
+      tags:
+        - batch
+      parameters:
+        - in: query
+          name: batchId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns tests fetched successfully

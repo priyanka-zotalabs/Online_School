@@ -1,0 +1,382 @@
+openapi: "3.0.2"
+info:
+  title: courseModules APIs
+  version: "1.0"
+
+paths:
+  /courseModules:
+    post:
+      summary: Add course
+      description: Teacher can add course with details
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - name
+                - description
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                subject:
+                  type: string
+                format:
+                  type: string
+                courseImageUrl:
+                  type: string
+                isLock:
+                  type: boolean
+                modules:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      description:
+                        type: string
+                      teacherIds:
+                        type: array
+                        items:
+                          type: string
+                      classType:
+                        type: string
+                      modulesImageUrl:
+                        type: string
+                      totalClasses:
+                        type: string
+                      chapters:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            description:
+                              type: string
+                            content:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  typeOfContent:
+                                    type: string
+                                  title:
+                                    type: string
+                                  description:
+                                    type: string
+                                  value:
+                                    type: string
+
+      responses:
+        "200":
+          description: Returns course added successfully
+    put:
+      summary: Update course
+      description: Teacher can Update course with details
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+              properties:
+                courseId:
+                  type: string
+                name:
+                  type: string
+                description:
+                  type: string
+                subject:
+                  type: string
+                format:
+                  type: string
+                courseImageUrl:
+                  type: string
+                isLock:
+                  type: boolean
+                modules:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      modulesId:
+                        type: string
+                      name:
+                        type: string
+                      description:
+                        type: string
+                      teacherIds:
+                        type: array
+                        items:
+                          type: string
+                      classType:
+                        type: string
+                      modulesImageUrl:
+                        type: string
+                      totalClasses:
+                        type: string
+                      chapters:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            chaptersId:
+                              type: string
+                            name:
+                              type: string
+                            description:
+                              type: string
+                            content:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  contentId:
+                                    type: string
+                                  typeOfContent:
+                                    type: string
+                                  title:
+                                    type: string
+                                  description:
+                                    type: string
+                                  value:
+                                    type: string
+
+      responses:
+        "200":
+          description: Returns course Update successfully
+    delete:
+      summary: Delete Specific course
+      description: Delete specific course by its id
+      tags:
+        - courseModules
+      parameters:
+        - in: query
+          name: courseId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns Delete course
+  /courseModules/teacher/courses:
+    get:
+      summary: Get get all Courses of a teacher
+      description: Can get all Courses of a teacher
+      tags:
+        - courseModules
+      responses:
+        "200":
+          description: Returns all Courses  of teacher
+
+  /courseModules/schedule:
+    post:
+      summary: Schedule a course
+      description: To schedule a chapter
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - moduleId
+                - chapterId
+                - dateTime
+                - scheduleType
+              properties:
+                courseId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+                dateTime:
+                  type: string
+                scheduleType:
+                  type: string
+      responses:
+        "200":
+          description: Returns course schedule status
+
+  /courseModules/registerCourse:
+    put:
+      summary: Student Register for a course
+      description: Student Register for a course and details are updated
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - courseId
+                - amount
+                - paymentMethod
+                - transaction_id
+                - name
+                - contactNumber
+              properties:
+                courseId:
+                  type: string
+                amount:
+                  type: string
+                paymentMethod:
+                  type: string
+                transaction_id:
+                  type: string
+                name:
+                  type: string
+                contactNumber:
+                  type: string
+      responses:
+        "200":
+          description: Returns Course registration successful
+  /courseModules/registeredCourse:
+    get:
+      summary: Student gets its registered courses
+      description: Student gets its registered courses
+      tags:
+        - courseModules
+      responses:
+        "200":
+          description: Returns Fetched courses registered by student
+  /courseModules/getAllDBCourses:
+    get:
+      summary: Get All Courses Of DataBase
+      description: get All Courses Of DataBase
+      tags:
+        - courseModules
+      responses:
+        "200":
+          description: Returns Fetched  All courses Of DataBase
+  /courseModules/getSpecificCourse:
+    get:
+      summary: Get Specific course
+      description: Get specific course by its id
+      tags:
+        - courseModules
+      parameters:
+        - in: query
+          name: courseId
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns course details
+
+  /courseModules/scheduleMeeting:
+    post:
+      summary: Schedule a Zoom meeting
+      description: Schedule Zoom meeting for specific chapter
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - courseId
+                - dateTime
+                - moduleId
+                - chapterId
+              properties:
+                courseId:
+                  type: string
+                dateTime:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+      responses:
+        "200":
+          description: Returns meeting scheduled successfully
+
+  /courseModules/addToken:
+    post:
+      summary: Add zoom tokens in db
+      description: add zoom tokens in db
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - access_token
+                - token_type
+                - refresh_token
+                - expires_in
+                - scope
+              properties:
+                access_token:
+                  type: string
+                token_type:
+                  type: string
+                refresh_token:
+                  type: string
+                expires_in:
+                  type: string
+                scope:
+                  type: string
+      responses:
+        "200":
+          description: Returns token added successfully
+
+  /courseModules/registeredStudents:
+    get:
+      summary: Get registered student details
+      description: Can get all registered Students
+      tags:
+        - courseModules
+      responses:
+        "200":
+          description: Returns student details
+
+  /courseModules/teacher/bbbSchedule:
+    post:
+      summary: Schedule BigBlueButton meeting for specific chapter
+      description: Schedule BigBlueButton meeting
+      tags:
+        - courseModules
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              required:
+                - batchId
+                - courseId
+                - moduleId
+                - chapterId
+                - dateTime
+              properties:
+                batchId:
+                  type: string
+                courseId:
+                  type: string
+                moduleId:
+                  type: string
+                chapterId:
+                  type: string
+                dateTime:
+                  type: string
+      responses:
+        "200":
+          description: Returns course schedule status

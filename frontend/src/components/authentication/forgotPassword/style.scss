@@ -1,0 +1,574 @@
+.main-login-div-Pass-stud {
+  top: 115px;
+  left: 0px;
+  width: 100%;
+  height: 640px;
+  z-index: 20;
+  background: transparent
+    linear-gradient(180deg, #008ccb 0%, #ffffff 100%, #ff5252de 100%) 0% 0%
+    no-repeat padding-box;
+  // background: transparent
+  //   linear-gradient(180deg, #fa7388 0%, #f9a7c2 53%, #9da8e2 100%) 0% 0%
+  //   no-repeat padding-box;
+  // box-shadow: 0px 3px 6px #00000000;
+  box-shadow: 0px 3px 6px #00000000;
+
+  text-align: center;
+}
+#reset-btn {
+  background: #fc8013 0% 0% no-repeat padding-box !important;
+}
+// .btn {
+//   border-radius: 4px !important;
+// }
+@font-face {
+  font-family: "Poppins";
+  // src: url("../../../shared/Components/teacher/whyToTeach/Poppins/Poppins-SemiBold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+// style={{
+//   background: "white",
+//   marginTop: "13%",
+//   marginLeft: "16%",
+//   boxShadow: "0px 3px 80px #0000001A",
+//   height: "365px",
+//   borderRadius: "7%",
+// }}
+// style={{ marginTop: "14%" }}
+#form-signin-col-Pass-stud {
+  margin-top: 14%;
+}
+.main-header-Pass-stud {
+  margin-top: 20%;
+  text-align: center;
+  font: Bold 22px Arial;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.started-span-Pass-stud {
+  padding: 0;
+  margin: 0;
+  color: #475083;
+  letter-spacing: 0px;
+  font-size: 26px;
+  font-weight: 600;
+}
+// #signIn-span-Pass-stud-new {
+//   font-family: "Poppins";
+//   padding: 0 10px;
+//   margin: 0 20px;
+//   color: #ff5252;
+//   letter-spacing: 0px;
+//   // font-size: 25px;
+//   // font-weight: 600;
+// }
+
+.form-signIn-btn-Pass-stud {
+  background: #fc8013 0% 0% no-repeat padding-box;
+  width: 70%;
+  margin-top: 10%;
+  text-align: left;
+  font: Regular 20px/24px Lato;
+  letter-spacing: 0px;
+  color: #ffffff;
+
+  text-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+}
+
+#signIn-label-Pass-stud {
+  margin-top: 5%;
+  font-weight: bold;
+}
+
+#span-forgot-Pass-stud {
+  background-color: #ffffff;
+  padding: 0 10px;
+  margin: 0 20px;
+  color: #ff5252;
+  letter-spacing: 0px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.form-group-login-Pass-stud {
+  margin-top: 2%;
+  padding: 1rem;
+}
+.logInForm-div-Pass-stud {
+  margin-top: 2%;
+  padding: 2rem;
+}
+
+@media (max-width: 359px) and (min-width: 320px) {
+  .signInImage-Pass-stud {
+    width: 90%;
+  }
+  .main-login-div-Pass-stud {
+    height: 545px;
+  }
+  .hideFirstColForgetPass {
+    display: none;
+  }
+  .signInBox-Pass-stud {
+    text-align: center;
+    background-color: white;
+    // margin-top: -90%;
+    margin-left: 4%;
+    z-index: 1;
+    box-shadow: 0px 3px 80px #0000001a;
+    height: 420px;
+    // border-radius: 7%;
+    margin-top: 10% !important;
+    border-radius: 40px !important;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-Pass-stud {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  // #signIn-span-Pass-stud-new {
+  //   // letter-spacing: 0px;
+  //   font-size: 15px;
+  //   font-weight: 600;
+  // }
+  #signIn-span-Pass-stud-new {
+    font-family: "Poppins";
+    padding-top: 20px;
+    font-size: 20px !important;
+    // padding: 0 10px;
+    margin: 0 20px;
+    color: #ff5252;
+    letter-spacing: 0px;
+    // font-size: 25px;
+    // font-weight: 600;
+  }
+  .form-group-login-Pass-stud {
+    padding: 1%;
+    margin-top: 20%;
+  }
+  #signIn-label-Pass-stud {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-signIn-btn-Pass-stud {
+    width: 60%;
+  }
+}
+
+@media (max-width: 374px) and (min-width: 360px) {
+  .signInImage-Pass-stud {
+    width: 80%;
+  }
+  .main-login-div-Pass-stud {
+    // top: 115px;
+    // left: 0px;
+    // width: 100%;
+    height: 500px;
+  }
+  .hideFirstColForgetPass {
+    display: none;
+  }
+  .signInBox-Pass-stud {
+    background-color: white;
+    // margin-top: -75%;
+    margin-top: 20% !important;
+    border-radius: 40px !important;
+    text-align: center;
+    margin-left: 4%;
+    z-index: 1;
+    box-shadow: 0px 3px 80px #0000001a;
+    //   height: 200px;
+
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-Pass-stud {
+    text-align: center;
+    //   padding: 0;
+    //   margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  // #signIn-span-Pass-stud-new {
+  //   text-align: center;
+  //   // letter-spacing: 0px;
+  //   font-size: 25px;
+  //   font-weight: bold;
+  // }
+  #signIn-span-Pass-stud-new {
+    font-family: "Poppins";
+    padding-top: 20px;
+    font-size: 23px;
+    // padding: 0 10px;
+    margin: 0 20px;
+    color: #ff5252;
+    letter-spacing: 0px;
+    // font-size: 25px;
+    // font-weight: 600;
+  }
+  .form-group-login-Pass-stud {
+    padding: 1%;
+  }
+  #signIn-label-Pass-stud {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-signIn-btn-Pass-stud {
+    width: 60%;
+  }
+}
+@media (max-width: 410px) and (min-width: 375px) {
+  .signInImage-Pass-stud {
+    width: 100%;
+  }
+  .main-login-div-Pass-stud {
+    height: 400px;
+  }
+  //  .signInImage-Pass-stud{
+  //   width:90%;
+  //  }
+  .hideFirstColForgetPass {
+    display: none;
+  }
+  .signInBox-Pass-stud {
+    text-align: center;
+    background-color: white;
+    // margin-top: -90%;
+    margin-left: 4%;
+    z-index: 1;
+    box-shadow: 0px 3px 80px #0000001a;
+    height: 450px;
+    // border-radius: 7%;
+    margin-top: 15% !important;
+    border-radius: 40px !important;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-Pass-stud {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  // #signIn-span-Pass-stud-new {
+  //   // letter-spacing: 0px;
+  //   font-size: 15px;
+  //   font-weight: 600;
+  // }
+  #signIn-span-Pass-stud-new {
+    font-family: "Poppins";
+    padding-top: 20px;
+    font-size: 23px;
+    // padding: 0 10px;
+    margin: 0 20px;
+    color: #ff5252;
+    letter-spacing: 0px;
+    // font-size: 25px;
+    // font-weight: 600;
+  }
+  .form-group-login-Pass-stud {
+    padding: 1%;
+    margin-top: 20%;
+  }
+  #signIn-label-Pass-stud {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-signIn-btn-Pass-stud {
+    width: 50%;
+    border-radius: 4px !important;
+  }
+}
+
+@media (max-width: 599px) and (min-width: 411px) {
+  .signInImage-Pass-stud {
+    width: 95%;
+  }
+
+  .main-login-div-Pass-stud {
+    //  margin-top: 10%;
+    height: 500px;
+  }
+  .hideFirstColForgetPass {
+    display: none;
+  }
+  .signInBox-Pass-stud {
+    //  width:85%;
+    text-align: center;
+    background-color: white;
+    // margin-top: 50%;
+    // margin-top: -75%;
+    margin-left: 4%;
+    z-index: 1;
+    box-shadow: 0px 3px 80px #0000001a;
+    height: 415px;
+    // border-radius: 7%;
+    margin-top: 13% !important;
+    border-radius: 40px !important;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-Pass-stud {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  // #signIn-span-Pass-stud-new {
+  //   // letter-spacing: 0px;
+  //   font-size: 15px;
+  //   font-weight: 600;
+  // }
+  #signIn-span-Pass-stud-new {
+    font-family: "Poppins";
+    padding-top: 20px;
+    font-size: 23px;
+    // padding: 0 10px;
+    margin: 0 20px;
+    color: #ff5252;
+    letter-spacing: 0px;
+    // font-size: 25px;
+    // font-weight: 600;
+  }
+  .form-group-login-Pass-stud {
+    padding: 1%;
+    margin-top: 20%;
+  }
+  #signIn-label-Pass-stud {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-signIn-btn-Pass-stud {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 600px) {
+  // .signInImage-Pass-stud{
+  //   width:100%;
+  //  }
+
+  .signInImage-Pass-stud {
+    width: 85%;
+  }
+  .main-login-div-Pass-stud {
+    height: 580px;
+  }
+  .hideFirstColForgetPass {
+    display: none;
+  }
+  .signInBox-Pass-stud {
+    text-align: center;
+    background-color: white;
+    // margin-top: -90%;
+    margin-left: 4%;
+    z-index: 1;
+    box-shadow: 0px 3px 80px #0000001a;
+    // height: 200px;
+    border-radius: 40px;
+    // width:70%;
+    // align-content: center;
+  }
+  #started-span-Pass-stud {
+    padding: 0;
+    margin: 0;
+    color: #475083;
+    letter-spacing: 0px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  // #signIn-span-Pass-stud-new {
+  //   // letter-spacing: 0px;
+  //   font-size: 15px;
+  //   font-weight: 600;
+  // }
+  #signIn-span-Pass-stud-new {
+    font-family: "Poppins";
+    padding-top: 20px;
+    font-size: 23px;
+    // padding: 0 10px;
+    margin: 0 20px;
+    color: #ff5252;
+    letter-spacing: 0px;
+    // font-size: 25px;
+    // font-weight: 600;
+  }
+  .form-group-login-Pass-stud {
+    padding: 1%;
+    margin-top: 20%;
+  }
+  #signIn-label-Pass-stud {
+    margin-top: 2%;
+    font-weight: bold;
+  }
+  #form-signIn-btn-Pass-stud {
+    width: 40%;
+  }
+}
+@media (max-width: 1005px) and (min-width: 768px) {
+  .signInImage-Pass-stud {
+    width: 110%;
+  }
+  .main-login-div-Pass-stud {
+    height: 520px;
+  }
+  #mobile91-login-Pass-stud {
+    margin-top: 7px;
+    margin-left: -20px;
+    margin-right: 0px;
+  }
+
+  .signInBox-Pass-stud {
+    text-align: center;
+    background-color: white;
+    margin-top: 8%;
+    margin-left: 10%;
+    z-index: 1;
+    box-shadow: 0px 3px 80px #0000001a;
+    height: 400px;
+    border-radius: 40px;
+  }
+}
+#started-span-Pass-stud {
+  padding: 0;
+  margin: 0;
+  color: #475083;
+  letter-spacing: 0px;
+  font-size: 20px;
+  font-weight: 400;
+}
+// #signIn-span-Pass-stud-new {
+//   // letter-spacing: 0px;
+//   font-size: 15px;
+//   font-weight: 600;
+// }
+#signIn-span-Pass-stud-new {
+  font-family: "Poppins";
+  padding-top: 20px;
+  font-size: 23px;
+  // padding: 0 10px;
+  // margin: 0 20px;
+  color: #ff5252;
+  letter-spacing: 0px;
+  // font-size: 25px;
+  // font-weight: 600;
+}
+.form-group-login-Pass-stud {
+  padding: 1%;
+  margin-top: 20%;
+}
+#signIn-label-Pass-stud {
+  margin-left: -10%;
+  margin-top: 2%;
+  font-weight: bold;
+}
+#form-signIn-btn-Pass-stud {
+  width: 100%;
+}
+
+@media (max-width: 1023px) and (min-width: 1006px) {
+  .signInImage-Pass-stud {
+    width: 100%;
+  }
+  .signInBox-Pass-stud {
+    background-color: white;
+    margin-top: 7%;
+    // margin-left: 16%;
+    box-shadow: 0px 3px 80px #0000001a;
+    // height: 300px !important;
+    border-radius: 40;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .signInImage-Pass-stud {
+    width: 110%;
+    opacity: 1 !important;
+  }
+
+  .signInBox-Pass-stud {
+    text-align: center;
+    background-color: white;
+    margin-top: 13%;
+    margin-left: 16%;
+    // box-shadow: 0px 3px 80px #0000001a;
+    height: 300px;
+    border-radius: 40px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 15px #25222340;
+  }
+  .main-header-Pass-stud {
+    font-size: 22px;
+    margin-bottom: 15%;
+  }
+
+  // #signIn-span-Pass-stud-new {
+  //   padding-top: 20px;
+  //   font-size: 23px;
+  // }
+  #signIn-span-Pass-stud-new {
+    font-family: "Poppins";
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 10px;
+    margin: 0 20px;
+    color: #ff5252;
+    letter-spacing: 0px;
+    // font-size: 25px;
+    // font-weight: 600;
+  }
+  // #resetPassButtonCol{
+  //   background: transparent linear-gradient(90deg, #F06190 0%, #FF5252 100%) 0% 0% no-repeat padding-box;
+  //   box-shadow: 0px 3px 6px #00000029;
+  //   border-radius: 4px;
+  //   opacity: 1;
+  // }
+  #signIn-label-Pass-stud {
+    margin-left: -20%;
+    z-index: 2;
+    text-align: left;
+    font: SemiBold 15px/31px Poppins;
+    letter-spacing: 0px;
+    color: #393939;
+    opacity: 1;
+  }
+  .form-signIn-btn-Pass-stud {
+    background: #fc8013 0% 0% no-repeat padding-box !important;
+    box-shadow: 0px 3px 6px #00000029;
+    font-size: 18px;
+    font-family: Lato;
+    // font: Regular 10px/24px Lato;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-shadow: 0px 3px 6px #1b050529;
+    opacity: 1;
+  }
+
+  // .btn {
+  //   margin-top: 5% !important;
+  //   // height: 30px !important;
+  //   border-radius: 4px;
+  // }
+  .form-group-login-Pass-stud {
+    padding-top: 0rem;
+    // padding:1rem;
+  }
+  .form-group-login-Pass-stud {
+    margin-top: 15%;
+  }
+}

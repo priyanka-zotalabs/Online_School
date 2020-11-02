@@ -1,0 +1,77 @@
+openapi: "3.0.2"
+info:
+  title: Student APIs
+  version: "1.0"
+
+paths:
+  /student/profile:
+    put:
+      summary: Edit Student Profile
+      description: Edit Student Profile API
+      tags:
+        - Student
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                name:
+                  type: string
+                imageUrl:
+                  type: string
+                contactNumber:
+                  type: string
+                board:
+                  type: string
+                class:
+                  type: string
+                location:
+                  type: string
+                school:
+                  type: string
+      responses:
+        "200":
+          description: Returns success of Edit Student Profile
+    get:
+      summary: Get active logged in student data
+      description: Need to login to access the API
+      tags:
+        - Student
+      responses:
+        "200":
+          description: Returns student details
+  /student/myCourses:
+    get:
+      summary: Get Student Courses
+      description: Get Student Courses Which First Installment Is paid
+      tags:
+        - Student
+      responses:
+        "200":
+          description: Returns student courses
+  /student/searchProfile:
+    get:
+      summary: Get Perticular Student Profile Details
+      description: Get Perticular Student Profile Details
+      tags:
+        - Student
+      parameters:
+        - name: studentId
+          in: query
+          description: Student Id for serch Student Profile
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Returns Perticular Student Profile Details
+  /student/studentBatchWiseTeachers:
+    get:
+      summary: Get Active Student Batch wise Teachers
+      description: Get Active Student Batch wise Teachers
+      tags:
+        - Student
+      responses:
+        "200":
+          description: Returns Active  Student Batch wise Teachers

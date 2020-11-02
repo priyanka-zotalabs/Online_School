@@ -1,0 +1,161 @@
+openapi: '3.0.2'
+info:
+  title: Teacher Interview APIs
+  version: '1.0'
+
+paths:
+  /teacherInterview/apply:
+      post:
+        summary: Apply for teacher
+        description: Apply for teacher API
+        tags:
+          - TeacherInterview
+        requestBody:
+          required: true
+          content:
+            multipart/form-data:
+              schema:
+                type: object
+                required:
+                  - name
+                  - email
+                  - contactNumber
+                  - countryCode
+                  - dob
+                  - teacherQualification
+                  - teachingExperience
+                  - primarySubject
+                  - grade
+                  - board
+                  - currentOccupation
+                  - internetSpeed
+                  - speedScreenshot
+                  - address
+                properties:
+                  name:
+                    type: string
+                  email:
+                    type: string
+                  contactNumber:
+                    type: string
+                  countryCode:
+                    type: string
+                  dob:
+                    type: string
+                  teacherQualification:
+                    type: string
+                  teachingExperience:
+                    type: string
+                  resume:
+                    type: string
+                    format: binary
+                  linkedInUrl:
+                    type: string
+                  primarySubject:
+                    type: string
+                  secondarySubject:
+                    type: string
+                  grade:
+                    type: string
+                  board:
+                    type: string
+                  exams:
+                    type: string
+                  weekdayPreferTime:
+                    type: string
+                  weekdayAvailableHours:
+                    type: string
+                  weekendPreferTime:
+                    type: string
+                  weekendAvailableHours:
+                    type: string   
+                  currentOccupation:
+                    type: string
+                  internetSpeed:
+                    type: string
+                  speedScreenshot:
+                    type: string
+                    format: binary     
+                  address:
+                    type: string
+                  reference:
+                    type: string  
+                  
+        responses:
+          '200':
+            description: Returns success of Apply Teacher
+      get:
+        summary: Get Apply teacher 
+        description: Get Apply teacher API,status filter available-'PENDING','APPROVED','REJECTED','APPROVED/REJECTED'
+        tags:
+          - TeacherInterview
+        parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+        responses:
+          '200':
+            description: Returns Get Apply teacher 
+  
+  /teacherInterview/myStatus:
+      get:
+        summary: Get current logged in teacher apply form
+        description: Get current logged in teacher apply form
+        tags:
+          - TeacherInterview
+        responses:
+          '200':
+            description: Returns Get Apply teacher
+             
+  /teacherInterview/approve:
+      put:
+        summary: approve teacher Interview
+        description: approve teacher Interview API
+        tags:
+          - TeacherInterview
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                required:
+                  - teacherInterviewIds
+                properties:
+                  teacherInterviewIds:
+                   type: array
+                   items:
+                     type: string
+        responses:
+          '200':
+            description: Returns success of approve teacher Interview
+
+  /teacherInterview/reject:
+      put:
+        summary: reject teacher Interview
+        description: reject teacher Interview API
+        tags:
+          - TeacherInterview
+        requestBody:
+          required: true
+          content:
+            application/json:
+              schema:
+                required:
+                  - teacherInterviewIds
+                properties:
+                  teacherInterviewIds:
+                   type: array
+                   items:
+                      type: string
+        responses:
+          '200':
+            description: Returns success of rejected teacher Interview
+
+
+
+
+  
+
+
+  

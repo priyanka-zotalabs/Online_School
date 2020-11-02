@@ -1,0 +1,49 @@
+#paper_batch_header {
+  margin-top: 3%;
+  /* padding: 10px; */
+  box-shadow: 0px 2px 10px #00000024;
+  width: 100%;
+  /* text-align: center !important; */
+}
+
+#paper_batch_header2 {
+  margin-top: 3%;
+  /* padding: 10px; */
+  box-shadow: 0px 2px 10px #00000024;
+  width: 100%;
+  text-align: center !important;
+}
+#paper_batch_titleAtCenter {
+  /* margin-top: 3%; */
+  /* padding: 10px; */
+  /* box-shadow: 0px 2px 10px #00000024; */
+  width: 100%;
+  text-align: center !important;
+}
+#student_profile_image {
+  width: 100px;
+  height: 100px;
+  margin-top: 5%;
+  /* margin-left: 125%; */
+  border-radius: 80px;
+}
+.create_batch_discription {
+  font: 14px Roboto;
+  letter-spacing: 0px;
+  color: #175592;
+}
+
+#student_profile_name {
+  font: 16px Roboto;
+  letter-spacing: 0px;
+  color: #175592;
+  font-weight: bold;
+}
+.student_profile_other_info {
+  font: 15px Roboto;
+  letter-spacing: 0px;
+  color: #175592;
+}
+#subLeftAlign {
+  text-align: center !important;
+}

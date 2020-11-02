@@ -1,0 +1,112 @@
+.paper_test_header {
+    margin-top: 5%;
+    padding: 10px;
+    box-shadow: 0px 2px 10px #00000024;;
+    width: 100%;
+  }
+  .paper_test_start {
+    margin-top: 5%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 10px #00000024;;
+    background-color: #8499ff;
+    width: 100%;
+  }
+  .create_test{
+    text-align: left;
+      /* padding-left: 25px; */
+      /* font: Bold 18px/43px Roboto; */
+       font: Bold 16px Roboto;
+      /* font-size: 16px; */
+      letter-spacing: 0px;
+      color: #175592;
+      margin: 0px;
+  }
+
+  .instruction_points
+  {
+    font: 14px Roboto;
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #175592;
+    margin: 0px;
+  }
+  .create_test_discription{
+    font: 14px Roboto;
+    /* font-size: 16px; */
+    letter-spacing: 0px;
+    color: #175592;
+  }
+
+  .assign_test_btn{
+    background-color: #8499ff !important;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    margin-left:42%;
+    margin-Top:10%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+  }
+
+
+  
+.boxContainer
+{
+    font: 14px Roboto;
+    padding: 5px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.AnsweredBox
+{
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  background-color: #C9FFC9;
+  text-align: center;
+  padding: 5px;
+}
+
+.NotMarkedBox
+{
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  background-color: #ececec;
+  text-align: center;
+  padding: 5px;
+}
+
+.NotAnsweredBox
+{
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  background-color: #FBA2A2;
+  text-align: center;
+  padding: 5px;
+}
+
+.NotVisitedBox
+{
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  background-color: #CEFFEA;
+  text-align: center;
+  padding: 5px;
+}
+
+.boxTextFlag
+{
+  font-size: 12px;
+  margin:5px;
+  padding: 5px;
+}

@@ -1,0 +1,39 @@
+openapi: '3.0.2'
+info:
+  title: Role APIs
+  version: '1.0'
+
+paths:
+  /role:
+    get:
+      summary: Get role details
+      description: Can get all role
+      tags:
+        - Role
+      responses:
+        '200':
+          description: Returns role details
+  /role/{code}:
+    get:
+      summary: Get role details
+      description: Can get by code or get all
+      tags:
+        - Role
+      parameters:
+        - in: path
+          name: code
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Returns role details
+  /role/add/teacherRole:
+    put:
+      summary: Add Teacher role to admin
+      description: Add Teacher role to admin
+      tags:
+        - Role
+      responses:
+        '200':
+          description: Returns Add Teacher role to admin
